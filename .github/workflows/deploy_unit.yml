@@ -105,7 +105,7 @@ jobs:
         run: conan config install -sf profiles/x86_64/linux/ -tf profiles https://github.com/libhal/conan-config.git
 
       - name: 📡 Sign into JFrog Artifactory
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/tags/'}}
         env:
           API_KEY: ${{ secrets.JFROG_LIBHAL_TRUNK_API_KEY }}
           JFROG_USER: ${{ secrets.JFROG_LIBHAL_TRUNK_USER }}
