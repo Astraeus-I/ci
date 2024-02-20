@@ -51,7 +51,7 @@ jobs:
 
       - name: 📡 Add `astraeus` repo to conan remotes
         run: conan remote add astraeus
-          https://libhal.jfrog.io/artifactory/api/conan/astraeuslibrary-conan
+          https://libhal.jfrog.io/artifactory/api/conan/astraeuslibrary-conan-local
 
       - name: 📡 Create and setup default profile
         run: conan profile detect --force
@@ -92,7 +92,7 @@ jobs:
 
       - name: 📡 Add `astraeus` repo to conan remotes
         run: conan remote add astraeus
-          https://libhal.jfrog.io/artifactory/api/conan/astraeuslibrary-conan
+          https://libhal.jfrog.io/artifactory/api/conan/astraeuslibrary-conan-local
 
 
       - name: 📡 Create and setup default profile
