@@ -59,7 +59,7 @@ jobs:
 
       - name: 📡 Add `astraeus` repo to conan remotes
         run: conan remote add astraeus
-          https://libhal.jfrog.io/artifactory/api/conan/astraeuslibrary-conan-local
+          https://libhal.jfrog.io/artifactory/api/conan/astraeuslibrary-conan
 
 
 
