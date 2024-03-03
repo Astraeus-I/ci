@@ -1,6 +1,6 @@
-# [`astraeus/ci`](https://github.com/astraeus/ci) - Continuous Integration
+# [`Astraeus-Library/ci`](https://github.com/Astraeus-Library/ci) - Continuous Integration
 
-The `astraeus/ci` repository provides a collection of GitHub Actions workflows
+The `Astraeus-Library/ci` repository provides a collection of GitHub Actions workflows
 that are designed to automate the process of building, testing, and deploying
 software libraries for various hardware platforms. These workflows are designed
 to be used with the libhal library, but can be adapted for use with other
@@ -78,12 +78,12 @@ on:
 jobs:
   # Unit test, lint, and doc generation
   ci:
-    uses: astraeus/ci/.github/workflows/library.yml@4.0.0
+    uses: Astraeus-Library/ci/.github/workflows/library.yml@4.0.0
     secrets: inherit
 
   # Test profile stm32f103c8 & upload prebuilt binaries to repository
   cortex-m3:
-    uses: astraeus/ci/.github/workflows/platform_deploy.yml@4.0.0
+    uses: Astraeus-Library/ci/.github/workflows/platform_deploy.yml@4.0.0
     with:
       profile: stm32f103c8
       upload: true
@@ -92,7 +92,7 @@ jobs:
 
   # Build platform based on profile& build p
   stm32f103c4:
-    uses: astraeus/ci/.github/workflows/platform_deploy.yml@4.0.0
+    uses: Astraeus-Library/ci/.github/workflows/platform_deploy.yml@4.0.0
     with:
       profile: stm32f103c4
       processor_profile: https://github.com/libhal/libhal-armcortex.git
